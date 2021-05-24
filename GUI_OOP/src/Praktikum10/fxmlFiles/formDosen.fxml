@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #c9d9f2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Praktikum10.controller.FormDosen">
+    <children>
+      <ImageView fitHeight="210.0" fitWidth="272.0" layoutX="319.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../business-woman-teacher-holds-lecture-presenting-marketing-data_110633-13.jpg" />
+         </image>
+      </ImageView>
+        <Button layoutX="544.0" layoutY="14.0" mnemonicParsing="false" onAction="#klikBack" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: #bdc3c7; -fx-background-radius: 15;" />
+        <Button layoutX="544.0" layoutY="13.5" mnemonicParsing="false" onAction="#klikBack" style="-fx-background-color: #ecf0f1; -fx-background-radius: 15;" text="Back">
+            <font>
+                <Font name="Trebuchet MS Bold" size="12.0" />
+            </font></Button>
+        <Label layoutX="151.0" layoutY="39.0" text="Manajemen Dosen">
+            <font>
+                <Font name="Trebuchet MS Bold" size="34.0" />
+            </font>
+        </Label>
+        <Label layoutX="26.0" layoutY="117.0" prefHeight="25.0" prefWidth="28.0" text="NIP">
+            <font>
+                <Font name="Trebuchet MS" size="12.0" />
+            </font></Label>
+        <Label layoutX="25.0" layoutY="154.0" text="Nama">
+            <font>
+                <Font name="Trebuchet MS" size="12.0" />
+            </font></Label>
+        <Label layoutX="25.0" layoutY="190.0" text="Prodi">
+            <font>
+                <Font name="Trebuchet MS" size="12.0" />
+            </font></Label>
+        <Label layoutX="24.0" layoutY="224.0" text="Fakultas">
+            <font>
+                <Font name="Trebuchet MS" size="12.0" />
+            </font></Label>
+        <TextField fx:id="inputNIP" layoutX="82.0" layoutY="117.0" prefHeight="25.0" prefWidth="178.0" />
+        <TextField fx:id="inputNama" layoutX="82.0" layoutY="150.0" prefHeight="25.0" prefWidth="178.0" />
+        <TextField fx:id="inputProdi" layoutX="82.0" layoutY="186.0" prefHeight="25.0" prefWidth="178.0" />
+        <TextField fx:id="inputFakultas" layoutX="82.0" layoutY="220.0" prefHeight="17.0" prefWidth="178.0" />
+        <Button layoutX="35.0" layoutY="266.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #bdc3c7; -fx-background-radius: 15;">
+            <font>
+                <Font name="Trebuchet MS Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button layoutX="35.0" layoutY="264.0" mnemonicParsing="false" onAction="#tambahData" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 15;" text="Tambah">
+            <font>
+                <Font name="Trebuchet MS Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button layoutX="107.0" layoutY="266.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #bdc3c7; -fx-background-radius: 15;">
+            <font>
+                <Font name="Trebuchet MS Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button layoutX="107.0" layoutY="264.0" mnemonicParsing="false" onAction="#updateData" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 15;" text="Update">
+            <font>
+                <Font name="Trebuchet MS Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button layoutX="179.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #bdc3c7; -fx-background-radius: 15;">
+            <font>
+                <Font name="Trebuchet MS Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button layoutX="179.0" layoutY="263.0" mnemonicParsing="false" onAction="#hapusData" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 15;" text="Hapus">
+            <font>
+                <Font name="Trebuchet MS Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button layoutX="249.0" layoutY="266.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #bdc3c7; -fx-background-radius: 15;">
+            <font>
+                <Font name="Trebuchet MS Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button layoutX="249.0" layoutY="264.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 15;" text="Reset">
+            <font>
+                <Font name="Trebuchet MS Bold" size="12.0" />
+            </font>
+        </Button>
+        <TableView fx:id="tabelDsn" layoutY="316.0" onMouseClicked="#mouseClicked" prefHeight="126.0" prefWidth="600.0" style="-fx-background-color: #c9d9f2;">
+            <columns>
+                <TableColumn fx:id="colNip" prefWidth="75.0" text="NIP" />
+                <TableColumn fx:id="colNama" prefWidth="158.3333511352539" text="Nama" />
+                <TableColumn fx:id="colProdi" prefWidth="176.3333282470703" text="Prodi" />
+                <TableColumn fx:id="colFakultas" prefWidth="189.3333740234375" text="Fakultas" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
